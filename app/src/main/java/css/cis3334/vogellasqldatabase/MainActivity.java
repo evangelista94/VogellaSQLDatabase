@@ -48,18 +48,15 @@ public class MainActivity extends ListActivity {
         @SuppressWarnings("unchecked")
         ArrayAdapter<Comment> adapter = (ArrayAdapter<Comment>) getListAdapter();
         Comment comment = null;
-
+        rating = (EditText) findViewById(R.id.editTextRating);
         //This option adds the comments
         switch (view.getId()) {
             case R.id.add:
-                rating = (EditText) findViewById(R.id.editTextRating);
                 String[] comments = new String[] { "Cool", "Very nice", "Hate it" };
                 int nextInt = new Random().nextInt(3);
 
                 // save the new comment to the database
-                //comment = datasource.createComment(comments[nextInt], rating.getText().toString());
-                String etRating = rating.getText().toString();
-                comment = datasource.createComment(comments[nextInt], etRating);
+                comment = datasource.createComment(comments[nextInt], rating.getText().toString());
                 adapter.add(comment);
                 break;
 

@@ -37,7 +37,7 @@ public class Comment {
 
     //returns comment
     public String toString() {
-        return comment + ", Rating: " + rating;
+        return comment + " " + rating;
     }
 
     public String getRating() {
