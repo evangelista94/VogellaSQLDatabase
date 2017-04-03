@@ -9,6 +9,7 @@ package css.cis3334.vogellasqldatabase;
 public class Comment {
     private long id;
     private String comment;
+    private String rating;
 
 
     //gets comment id and returns it
@@ -36,6 +37,14 @@ public class Comment {
 
     //returns comment
     public String toString() {
-        return comment;
+        return comment + ", Rating: " + rating;
+    }
+
+    public String getRating() {
+        return rating;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
     }
 }
