@@ -33,12 +33,6 @@ public class Comment {
     }
 
     // Will be used by the ArrayAdapter in the ListView
-    @Override
-
-    //returns comment
-    public String toString() {
-        return comment + " " + rating;
-    }
 
     public String getRating() {
         return rating;
@@ -47,4 +41,12 @@ public class Comment {
     public void setRating(String rating) {
         this.rating = rating;
     }
+    @Override
+
+    //returns comment
+    public String toString() {
+        return (comment + " " + rating);
+    }
+
+
 }
